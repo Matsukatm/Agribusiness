@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Knowledge Center - GreenGrove Market</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <meta name="description" content="Kenya's premier gardening authority. Seasonal calendars, growing guides, pest management, and expert advice for Nairobi gardens." />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fgreengrove7653back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"></script>
+</head>
+<body class="bg-background">
+    <!-- Header Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <svg class="h-10 w-10 text-primary" viewBox="0 0 40 40" fill="currentColor">
+                        <path d="M20 2C15.5 2 12 5.5 12 10c0 2.5 1 4.8 2.6 6.5L20 22l5.4-5.5C27 14.8 28 12.5 28 10c0-4.5-3.5-8-8-8zm0 11c-1.7 0-3-1.3-3-3s1.3-3 3-3 3 1.3 3 3-1.3 3-3 3z"/>
+                        <path d="M8 25c0-2 1.5-3.5 3.5-3.5h17c2 0 3.5 1.5 3.5 3.5v10c0 2-1.5 3.5-3.5 3.5h-17C9.5 38.5 8 37 8 35V25z"/>
+                        <circle cx="15" cy="30" r="2" fill="white"/>
+                        <circle cx="25" cy="30" r="2" fill="white"/>
+                    </svg>
+                    <span class="ml-3 text-xl font-poppins font-bold text-primary">GreenGrove Market</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="homepage.html" class="text-text-secondary hover:text-primary transition-colors">Home</a>
+                    <a href="product_marketplace.html" class="text-text-secondary hover:text-primary transition-colors">Shop Groceries</a>
+                    <a href="garden_services_hub.html" class="text-text-secondary hover:text-primary transition-colors">Garden Services</a>
+                    <a href="knowledge_center.html" class="text-primary font-medium hover:text-secondary transition-colors">Knowledge Center</a>
+                    <a href="customer_dashboard.html" class="text-text-secondary hover:text-primary transition-colors">My Account</a>
+                    <a href="contact_support.html" class="text-text-secondary hover:text-primary transition-colors">Support</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden p-2" onclick="toggleMobileMenu()">
+                    <svg class="h-6 w-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-3">
+                    <a href="homepage.html" class="text-text-secondary hover:text-primary transition-colors py-2">Home</a>
+                    <a href="product_marketplace.html" class="text-text-secondary hover:text-primary transition-colors py-2">Shop Groceries</a>
+                    <a href="garden_services_hub.html" class="text-text-secondary hover:text-primary transition-colors py-2">Garden Services</a>
+                    <a href="knowledge_center.html" class="text-primary font-medium py-2">Knowledge Center</a>
+                    <a href="customer_dashboard.html" class="text-text-secondary hover:text-primary transition-colors py-2">My Account</a>
+                    <a href="contact_support.html" class="text-text-secondary hover:text-primary transition-colors py-2">Support</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-primary-50 to-secondary-50 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+            <div class="text-center">
+                <div class="mb-6">
+                    <span class="inline-block bg-success-100 text-success-700 px-4 py-2 rounded-full text-sm font-medium mb-4">
+                        🌱 Kenya's Premier Gardening Authority
+                    </span>
+                    <h1 class="text-4xl lg:text-5xl font-poppins font-bold text-primary mb-4">
+                        Knowledge Center
+                    </h1>
+                    <p class="text-lg text-text-secondary mb-8 max-w-3xl mx-auto">
+                        Expert guidance for growing success in Kenya's unique climate. From seasonal planting calendars to pest management solutions, everything you need to thrive.
+                    </p>
+                </div>
+
+                <!-- Search Bar -->
+                <div class="max-w-2xl mx-auto mb-8">
+                    <div class="relative">
+                        <input type="text" placeholder="Search guides, recipes, or ask a question..." class="w-full input-field pl-12 pr-4 py-4 text-lg rounded-xl" id="searchInput" />
+                        <svg class="absolute left-4 top-1/2 transform -translate-y-1/2 h-6 w-6 text-text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Quick Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+                    <div class="bg-white rounded-lg p-4 shadow-sm">
+                        <div class="text-2xl font-poppins font-bold text-primary">247</div>
+                        <div class="text-sm text-text-secondary">Growing Guides</div>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 shadow-sm">
+                        <div class="text-2xl font-poppins font-bold text-secondary">89</div>
+                        <div class="text-sm text-text-secondary">Video Tutorials</div>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 shadow-sm">
+                        <div class="text-2xl font-poppins font-bold text-accent">156</div>
+                        <div class="text-sm text-text-secondary">Recipes</div>
+                    </div>
+                    <div class="bg-white rounded-lg p-4 shadow-sm">
+                        <div class="text-2xl font-poppins font-bold text-success">1.2k</div>
+                        <div class="text-sm text-text-secondary">Community Q&As</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Background Pattern -->
+        <div class="absolute top-0 right-0 -z-10 opacity-10">
+            <svg width="404" height="404" fill="none" viewBox="0 0 404 404">
+                <defs>
+                    <pattern id="knowledge-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                        <rect x="0" y="0" width="4" height="4" class="text-primary" fill="currentColor"/>
+                    </pattern>
+                </defs>
+                <rect width="404" height="404" fill="url(#knowledge-pattern)"/>
+            </svg>
+        </div>
+    </section>
+
+    <!-- Content Categories Navigation -->
+    <section class="py-8 bg-white border-b border-border-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-wrap justify-center gap-4">
+                <button class="category-btn active" data-category="all">All Content</button>
+                <button class="category-btn" data-category="seasonal">Seasonal Calendar</button>
+                <button class="category-btn" data-category="guides">Growing Guides</button>
+                <button class="category-btn" data-category="pest">Pest Management</button>
+                <button class="category-btn" data-category="recipes">Recipes</button>
+                <button class="category-btn" data-category="videos">Video Tutorials</button>
+                <button class="category-btn" data-category="forum">Ask Expert</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Seasonal Calendar -->
+    <section class="py-16 bg-surface" id="seasonal-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-poppins font-bold text-primary mb-4">Seasonal Planting Calendar</h2>
+                <p class="text-lg text-text-secondary max-w-2xl mx-auto">
+                    Optimal planting times for Kenya's climate zones. Plan your garden for year-round harvests.
+                </p>
+            </div>
+
+            <!-- Current Month Highlight -->
+            <div class="bg-accent-50 rounded-xl p-6 mb-8 border border-accent-200">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-xl font-poppins font-semibold text-accent">August 2025 - Peak Planting Season</h3>
+                    <span class="bg-accent text-white px-3 py-1 rounded-full text-sm font-medium">Current Month</span>
+                </div>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <div>
+                        <h4 class="font-poppins font-semibold text-primary mb-2">🌱 Plant Now</h4>
+                        <ul class="text-text-secondary space-y-1">
+                            <li>• Sukuma Wiki (Kale)</li>
+                            <li>• Spinach</li>
+                            <li>• Coriander</li>
+                            <li>• Lettuce</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-poppins font-semibold text-primary mb-2">🌿 Harvest Ready</h4>
+                        <ul class="text-text-secondary space-y-1">
+                            <li>• Tomatoes</li>
+                            <li>• Capsicum</li>
+                            <li>• Herbs</li>
+                            <li>• Carrots</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-poppins font-semibold text-primary mb-2">💧 Care Tips</h4>
+                        <ul class="text-text-secondary space-y-1">
+                            <li>• Water early morning</li>
+                            <li>• Mulch to retain moisture</li>
+                            <li>• Watch for aphids</li>
+                            <li>• Prepare for September rains</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Monthly Calendar Grid -->
+            <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- January -->
+                <div class="card p-4">
+                    <h4 class="font-poppins font-semibold text-primary mb-2">January</h4>
+                    <div class="text-sm text-text-secondary space-y-1">
+                        <p><strong>Plant:</strong> Beans, Maize</p>
+                        <p><strong>Harvest:</strong> Tomatoes, Onions</p>
+                        <p><strong>Weather:</strong> Dry season</p>
+                    </div>
+                </div>
+
+                <!-- February -->
+                <div class="card p-4">
+                    <h4 class="font-poppins font-semibold text-primary mb-2">February</h4>
+                    <div class="text-sm text-text-secondary space-y-1">
+                        <p><strong>Plant:</strong> Carrots, Beetroot</p>
+                        <p><strong>Harvest:</strong> Capsicum, Herbs</p>
+                        <p><strong>Weather:</strong> Hot & dry</p>
+                    </div>
+                </div>
+
+                <!-- March -->
+                <div class="card p-4">
+                    <h4 class="font-poppins font-semibold text-primary mb-2">March</h4>
+                    <div class="text-sm text-text-secondary space-y-1">
+                        <p><strong>Plant:</strong> Sukuma Wiki, Spinach</p>
+                        <p><strong>Harvest:</strong> Beans, Maize</p>
+                        <p><strong>Weather:</strong> Long rains begin</p>
+                    </div>
+                </div>
+
+                <!-- April -->
+                <div class="card p-4">
+                    <h4 class="font-poppins font-semibold text-primary mb-2">April</h4>
+                    <div class="text-sm text-text-secondary space-y-1">
+                        <p><strong>Plant:</strong> Tomatoes, Lettuce</p>
+                        <p><strong>Harvest:</strong> Carrots, Beetroot</p>
+                        <p><strong>Weather:</strong> Peak rains</p>
+                    </div>
+                </div>
+
+                <!-- Continue for remaining months... -->
+                <div class="card p-4">
+                    <h4 class="font-poppins font-semibold text-primary mb-2">May</h4>
+                    <div class="text-sm text-text-secondary space-y-1">
+                        <p><strong>Plant:</strong> Herbs, Coriander</p>
+                        <p><strong>Harvest:</strong> Sukuma Wiki</p>
+                        <p><strong>Weather:</strong> Continued rains</p>
+                    </div>
+                </div>
+
+                <div class="card p-4">
+                    <h4 class="font-poppins font-semibold text-primary mb-2">June</h4>
+                    <div class="text-sm text-text-secondary space-y-1">
+                        <p><strong>Plant:</strong> Onions, Leeks</p>
+                        <p><strong>Harvest:</strong> Tomatoes, Lettuce</p>
+                        <p><strong>Weather:</strong> Cool & wet</p>
+                    </div>
+                </div>
+
+                <div class="card p-4">
+                    <h4 class="font-poppins font-semibold text-primary mb-2">July</h4>
+                    <div class="text-sm text-text-secondary space-y-1">
+                        <p><strong>Plant:</strong> Cabbage, Broccoli</p>
+                        <p><strong>Harvest:</strong> Herbs, Coriander</p>
+                        <p><strong>Weather:</strong> Dry & cool</p>
+                    </div>
+                </div>
+
+                <div class="card p-4 border-2 border-accent">
+                    <h4 class="font-poppins font-semibold text-accent mb-2">August ⭐</h4>
+                    <div class="text-sm text-text-secondary space-y-1">
+                        <p><strong>Plant:</strong> Sukuma Wiki, Spinach</p>
+                        <p><strong>Harvest:</strong> Onions, Leeks</p>
+                        <p><strong>Weather:</strong> Peak planting season</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Growing Guides -->
+    <section class="py-16 bg-white" id="guides-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-poppins font-bold text-primary mb-4">Popular Growing Guides</h2>
+                <p class="text-lg text-text-secondary max-w-2xl mx-auto">
+                    Step-by-step instructions for growing Kenya's favorite vegetables and herbs
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Guide 1 -->
+                <div class="card overflow-hidden">
+                    <img src="https://images.pexels.com/photos/1300972/pexels-photo-1300972.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Sukuma Wiki growing guide" class="w-full h-48 object-cover" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <span class="bg-success-100 text-success-700 px-2 py-1 rounded text-xs font-medium">Beginner Friendly</span>
+                            <span class="ml-2 text-sm text-text-secondary">5 min read</span>
+                        </div>
+                        <h3 class="font-poppins font-semibold text-primary mb-2">Growing Sukuma Wiki in Small Spaces</h3>
+                        <p class="text-text-secondary text-sm mb-4">
+                            Complete guide to growing Kenya's favorite leafy green in containers, balconies, and small garden plots.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=40&h=40&fit=crop" alt="Expert Mary" class="w-8 h-8 rounded-full object-cover mr-2" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                <span class="text-sm font-medium text-primary">Mary Wanjiku</span>
+                            </div>
+                            <button class="text-accent hover:text-accent-600 transition-colors">
+                                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-border-light">
+                            <a href="product_marketplace.html" class="text-accent hover:text-accent-600 text-sm font-medium">
+                                Shop Sukuma Wiki Seeds →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guide 2 -->
+                <div class="card overflow-hidden">
+                    <img src="https://images.pixabay.com/photo/2016/08/11/08/04/vegetables-1584999_1280.jpg" alt="Tomato growing guide" class="w-full h-48 object-cover" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <span class="bg-warning-100 text-warning-700 px-2 py-1 rounded text-xs font-medium">Intermediate</span>
+                            <span class="ml-2 text-sm text-text-secondary">8 min read</span>
+                        </div>
+                        <h3 class="font-poppins font-semibold text-primary mb-2">Tomatoes: From Seed to Harvest</h3>
+                        <p class="text-text-secondary text-sm mb-4">
+                            Master tomato growing in Kenya's climate with proper staking, pruning, and disease prevention techniques.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=40&h=40&fit=crop" alt="Expert John" class="w-8 h-8 rounded-full object-cover mr-2" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                <span class="text-sm font-medium text-primary">John Mwangi</span>
+                            </div>
+                            <button class="text-accent hover:text-accent-600 transition-colors">
+                                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-border-light">
+                            <a href="garden_services_hub.html" class="text-secondary hover:text-secondary-600 text-sm font-medium">
+                                Book Garden Consultation →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guide 3 -->
+                <div class="card overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=400&q=80" alt="Urban farming guide" class="w-full h-48 object-cover" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <span class="bg-accent-100 text-accent-700 px-2 py-1 rounded text-xs font-medium">Advanced</span>
+                            <span class="ml-2 text-sm text-text-secondary">12 min read</span>
+                        </div>
+                        <h3 class="font-poppins font-semibold text-primary mb-2">Urban Farming in Nairobi Apartments</h3>
+                        <p class="text-text-secondary text-sm mb-4">
+                            Transform your balcony or rooftop into a productive garden with vertical growing and container systems.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <img src="https://images.pixabay.com/photo/2016/11/21/12/42/beard-1845166_1280.jpg" alt="Expert Grace" class="w-8 h-8 rounded-full object-cover mr-2" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                <span class="text-sm font-medium text-primary">Grace Njeri</span>
+                            </div>
+                            <button class="text-accent hover:text-accent-600 transition-colors">
+                                <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-border-light">
+                            <a href="product_marketplace.html" class="text-accent hover:text-accent-600 text-sm font-medium">
+                                Shop Container Garden Kits →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <button class="btn-secondary">View All Growing Guides</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pest Management Section -->
+    <section class="py-16 bg-surface" id="pest-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-poppins font-bold text-primary mb-4">Pest Management Solutions</h2>
+                <p class="text-lg text-text-secondary max-w-2xl mx-auto">
+                    Identify and treat common garden pests using organic, locally available solutions
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Pest 1 -->
+                <div class="card p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-error-100 p-3 rounded-lg mr-4">
+                            <svg class="h-6 w-6 text-error" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-poppins font-semibold text-primary">Aphids</h3>
+                            <p class="text-sm text-text-secondary">Common on sukuma wiki, tomatoes</p>
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <div>
+                            <h4 class="font-medium text-primary text-sm">Identification:</h4>
+                            <p class="text-text-secondary text-sm">Small green/black insects clustering on leaves</p>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-primary text-sm">Organic Solution:</h4>
+                            <p class="text-text-secondary text-sm">Soap spray: 2 tbsp dish soap + 1L water</p>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-primary text-sm">Prevention:</h4>
+                            <p class="text-text-secondary text-sm">Plant marigolds nearby, regular inspection</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pest 2 -->
+                <div class="card p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-warning-100 p-3 rounded-lg mr-4">
+                            <svg class="h-6 w-6 text-warning" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-poppins font-semibold text-primary">Cutworms</h3>
+                            <p class="text-sm text-text-secondary">Attack young seedlings at soil level</p>
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <div>
+                            <h4 class="font-medium text-primary text-sm">Identification:</h4>
+                            <p class="text-text-secondary text-sm">Seedlings cut at base, brown caterpillars in soil</p>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-primary text-sm">Organic Solution:</h4>
+                            <p class="text-text-secondary text-sm">Collar protection with cardboard tubes</p>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-primary text-sm">Prevention:</h4>
+                            <p class="text-text-secondary text-sm">Clear weeds, hand-pick at night</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pest 3 -->
+                <div class="card p-6">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-accent-100 p-3 rounded-lg mr-4">
+                            <svg class="h-6 w-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="font-poppins font-semibold text-primary">Whiteflies</h3>
+                            <p class="text-sm text-text-secondary">Common on tomatoes, capsicum</p>
+                        </div>
+                    </div>
+                    <div class="space-y-3">
+                        <div>
+                            <h4 class="font-medium text-primary text-sm">Identification:</h4>
+                            <p class="text-text-secondary text-sm">Tiny white flying insects under leaves</p>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-primary text-sm">Organic Solution:</h4>
+                            <p class="text-text-secondary text-sm">Yellow sticky traps, neem oil spray</p>
+                        </div>
+                        <div>
+                            <h4 class="font-medium text-primary text-sm">Prevention:</h4>
+                            <p class="text-text-secondary text-sm">Good air circulation, companion planting</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <button class="btn-primary">Download Complete Pest Guide</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recipe Collections -->
+    <section class="py-16 bg-white" id="recipes-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-poppins font-bold text-primary mb-4">Fresh Recipe Collections</h2>
+                <p class="text-lg text-text-secondary max-w-2xl mx-auto">
+                    Delicious ways to use your fresh groceries and homegrown produce
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Recipe 1 -->
+                <div class="card overflow-hidden">
+                    <img src="https://images.pixabay.com/photo/2017/05/11/19/44/fresh-fruits-2305192_1280.jpg" alt="Sukuma wiki recipe" class="w-full h-48 object-cover" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <span class="bg-success-100 text-success-700 px-2 py-1 rounded text-xs font-medium">Traditional</span>
+                            <span class="ml-2 text-sm text-text-secondary">15 min</span>
+                        </div>
+                        <h3 class="font-poppins font-semibold text-primary mb-2">Sukuma Wiki with Coconut</h3>
+                        <p class="text-text-secondary text-sm mb-4">
+                            Traditional Kenyan preparation with a modern twist using fresh coconut milk and spices.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <span class="text-sm text-text-secondary">Serves 4</span>
+                                <span class="mx-2">•</span>
+                                <span class="text-sm text-text-secondary">Easy</span>
+                            </div>
+                            <div class="flex space-x-2">
+                                <button class="text-accent hover:text-accent-600 transition-colors">
+                                    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/>
+                                    </svg>
+                                </button>
+                                <button class="text-accent hover:text-accent-600 transition-colors">
+                                    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-border-light">
+                            <a href="product_marketplace.html" class="text-accent hover:text-accent-600 text-sm font-medium">
+                                Order Fresh Sukuma Wiki →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recipe 2 -->
+                <div class="card overflow-hidden">
+                    <img src="https://images.pexels.com/photos/1300972/pexels-photo-1300972.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Garden salad recipe" class="w-full h-48 object-cover" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <span class="bg-accent-100 text-accent-700 px-2 py-1 rounded text-xs font-medium">Modern</span>
+                            <span class="ml-2 text-sm text-text-secondary">10 min</span>
+                        </div>
+                        <h3 class="font-poppins font-semibold text-primary mb-2">Rainbow Garden Salad</h3>
+                        <p class="text-text-secondary text-sm mb-4">
+                            Colorful mix of fresh lettuce, tomatoes, carrots, and herbs with tangy dressing.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <span class="text-sm text-text-secondary">Serves 2</span>
+                                <span class="mx-2">•</span>
+                                <span class="text-sm text-text-secondary">Quick</span>
+                            </div>
+                            <div class="flex space-x-2">
+                                <button class="text-accent hover:text-accent-600 transition-colors">
+                                    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/>
+                                    </svg>
+                                </button>
+                                <button class="text-accent hover:text-accent-600 transition-colors">
+                                    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-border-light">
+                            <a href="product_marketplace.html" class="text-accent hover:text-accent-600 text-sm font-medium">
+                                Order Salad Ingredients →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recipe 3 -->
+                <div class="card overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=400&q=80" alt="Herb-infused dish" class="w-full h-48 object-cover" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                    <div class="p-6">
+                        <div class="flex items-center mb-2">
+                            <span class="bg-secondary-100 text-secondary-700 px-2 py-1 rounded text-xs font-medium">Fusion</span>
+                            <span class="ml-2 text-sm text-text-secondary">20 min</span>
+                        </div>
+                        <h3 class="font-poppins font-semibold text-primary mb-2">Fresh Herb Ugali Crust</h3>
+                        <p class="text-text-secondary text-sm mb-4">
+                            Traditional ugali elevated with fresh herbs from your garden - coriander, basil, and mint.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <span class="text-sm text-text-secondary">Serves 6</span>
+                                <span class="mx-2">•</span>
+                                <span class="text-sm text-text-secondary">Medium</span>
+                            </div>
+                            <div class="flex space-x-2">
+                                <button class="text-accent hover:text-accent-600 transition-colors">
+                                    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z"/>
+                                    </svg>
+                                </button>
+                                <button class="text-accent hover:text-accent-600 transition-colors">
+                                    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-border-light">
+                            <a href="product_marketplace.html" class="text-accent hover:text-accent-600 text-sm font-medium">
+                                Order Fresh Herbs →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ask the Expert Forum -->
+    <section class="py-16 bg-surface" id="forum-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-poppins font-bold text-primary mb-4">Ask the Expert</h2>
+                <p class="text-lg text-text-secondary max-w-2xl mx-auto">
+                    Get personalized advice from certified gardening professionals
+                </p>
+            </div>
+
+            <!-- Ask Question Form -->
+            <div class="max-w-4xl mx-auto mb-12">
+                <div class="card p-6">
+                    <h3 class="font-poppins font-semibold text-primary mb-4">Ask Your Question</h3>
+                    <form class="space-y-4">
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <input type="text" placeholder="Your Name" class="input-field" />
+                            <input type="email" placeholder="Email Address" class="input-field" />
+                        </div>
+                        <input type="text" placeholder="Question Title" class="input-field" />
+                        <textarea placeholder="Describe your gardening question or challenge..." rows="4" class="input-field resize-none"></textarea>
+                        <div class="flex items-center space-x-4">
+                            <label class="flex items-center cursor-pointer">
+                                <input type="file" class="hidden" accept="image/*" />
+                                <div class="flex items-center space-x-2 text-accent hover:text-accent-600">
+                                    <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                                    </svg>
+                                    <span class="text-sm font-medium">Add Photos</span>
+                                </div>
+                            </label>
+                            <select class="input-field">
+                                <option>Select Category</option>
+                                <option>Urban Farming</option>
+                                <option>Pest Management</option>
+                                <option>Plant Diseases</option>
+                                <option>Soil & Composting</option>
+                                <option>Water Management</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn-primary">Submit Question</button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Recent Questions -->
+            <div class="space-y-6">
+                <h3 class="text-xl font-poppins font-semibold text-primary">Recent Questions & Answers</h3>
+
+                <!-- Question 1 -->
+                <div class="card p-6">
+                    <div class="flex items-start space-x-4">
+                        <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=50&h=50&fit=crop" alt="User Sarah" class="w-12 h-12 rounded-full object-cover" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <div class="flex-1">
+                            <div class="flex items-center justify-between mb-2">
+                                <div>
+                                    <h4 class="font-poppins font-semibold text-primary">Sarah K.</h4>
+                                    <p class="text-sm text-text-secondary">2 days ago • Westlands, Nairobi</p>
+                                </div>
+                                <span class="bg-success-100 text-success-700 px-2 py-1 rounded text-xs font-medium">Answered</span>
+                            </div>
+                            <h5 class="font-medium text-primary mb-2">My tomato leaves are turning yellow. What could be wrong?</h5>
+                            <p class="text-text-secondary text-sm mb-4">
+                                I planted tomatoes 6 weeks ago and they were doing well, but now the lower leaves are turning yellow and dropping. The plants are in containers on my balcony.
+                            </p>
+                            
+                            <!-- Expert Answer -->
+                            <div class="bg-primary-50 rounded-lg p-4 border-l-4 border-primary">
+                                <div class="flex items-center mb-2">
+                                    <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=40&h=40&fit=crop" alt="Expert John" class="w-8 h-8 rounded-full object-cover mr-2" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                    <div>
+                                        <span class="text-sm font-medium text-primary">John Mwangi</span>
+                                        <span class="text-xs text-text-secondary ml-2">Certified Expert</span>
+                                    </div>
+                                </div>
+                                <p class="text-text-secondary text-sm">
+                                    This is likely nitrogen deficiency, common in container plants. The yellowing starts from bottom leaves as the plant moves nutrients to new growth. Try liquid fertilizer every 2 weeks and ensure good drainage. Also check if containers are large enough - tomatoes need at least 20L containers.
+                                </p>
+                            </div>
+
+                            <div class="flex items-center justify-between mt-4">
+                                <div class="flex items-center space-x-4">
+                                    <button class="flex items-center space-x-1 text-text-secondary hover:text-accent transition-colors">
+                                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"/>
+                                        </svg>
+                                        <span class="text-sm">12</span>
+                                    </button>
+                                    <button class="flex items-center space-x-1 text-text-secondary hover:text-accent transition-colors">
+                                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                                        </svg>
+                                        <span class="text-sm">Reply</span>
+                                    </button>
+                                </div>
+                                <a href="product_marketplace.html" class="text-accent hover:text-accent-600 text-sm font-medium">
+                                    Shop Fertilizers →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="card p-6">
+                    <div class="flex items-start space-x-4">
+                        <img src="https://images.pixabay.com/photo/2016/11/21/12/42/beard-1845166_1280.jpg" alt="User Peter" class="w-12 h-12 rounded-full object-cover" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <div class="flex-1">
+                            <div class="flex items-center justify-between mb-2">
+                                <div>
+                                    <h4 class="font-poppins font-semibold text-primary">Peter M.</h4>
+                                    <p class="text-sm text-text-secondary">5 days ago • Karen, Nairobi</p>
+                                </div>
+                                <span class="bg-warning-100 text-warning-700 px-2 py-1 rounded text-xs font-medium">Pending</span>
+                            </div>
+                            <h5 class="font-medium text-primary mb-2">Best vegetables for Nairobi's clay soil?</h5>
+                            <p class="text-text-secondary text-sm mb-4">
+                                My compound has heavy clay soil that gets waterlogged during rains. Which vegetables would work best without major soil amendment? Looking for low-maintenance options.
+                            </p>
+                            
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center space-x-4">
+                                    <button class="flex items-center space-x-1 text-text-secondary hover:text-accent transition-colors">
+                                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"/>
+                                        </svg>
+                                        <span class="text-sm">3</span>
+                                    </button>
+                                    <button class="flex items-center space-x-1 text-text-secondary hover:text-accent transition-colors">
+                                        <svg class="h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                                        </svg>
+                                        <span class="text-sm">Answer</span>
+                                    </button>
+                                </div>
+                                <a href="garden_services_hub.html" class="text-secondary hover:text-secondary-600 text-sm font-medium">
+                                    Book Soil Consultation →
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <button class="btn-secondary">View All Questions</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Tutorials Preview -->
+    <section class="py-16 bg-white" id="videos-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-poppins font-bold text-primary mb-4">Video Tutorials</h2>
+                <p class="text-lg text-text-secondary max-w-2xl mx-auto">
+                    Watch our experts demonstrate techniques in real Nairobi gardens
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Video 1 -->
+                <div class="card overflow-hidden">
+                    <div class="relative">
+                        <img src="https://images.pexels.com/photos/1301856/pexels-photo-1301856.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Container gardening video" class="w-full h-48 object-cover" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                            <button class="bg-white bg-opacity-90 rounded-full p-4 hover:bg-opacity-100 transition-all">
+                                <svg class="h-8 w-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="absolute bottom-2 right-2 bg-black bg-opacity-70 text-white px-2 py-1 rounded text-sm">
+                            8:45
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-poppins font-semibold text-primary mb-2">Container Gardening Setup</h3>
+                        <p class="text-text-secondary text-sm mb-4">
+                            Complete guide to setting up productive container gardens on Nairobi balconies and rooftops.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=40&h=40&fit=crop" alt="Expert Mary" class="w-8 h-8 rounded-full object-cover mr-2" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                <span class="text-sm font-medium text-primary">Mary Wanjiku</span>
+                            </div>
+                            <span class="text-sm text-text-secondary">2.1k views</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="card overflow-hidden">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=400&q=80" alt="Composting video" class="w-full h-48 object-cover" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                            <button class="bg-white bg-opacity-90 rounded-full p-4 hover:bg-opacity-100 transition-all">
+                                <svg class="h-8 w-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="absolute bottom-2 right-2 bg-black bg-opacity-70 text-white px-2 py-1 rounded text-sm">
+                            12:30
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-poppins font-semibold text-primary mb-2">Composting in Small Spaces</h3>
+                        <p class="text-text-secondary text-sm mb-4">
+                            Learn to create nutrient-rich compost using kitchen scraps in apartment-friendly systems.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=40&h=40&fit=crop" alt="Expert John" class="w-8 h-8 rounded-full object-cover mr-2" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                <span class="text-sm font-medium text-primary">John Mwangi</span>
+                            </div>
+                            <span class="text-sm text-text-secondary">1.8k views</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Video 3 -->
+                <div class="card overflow-hidden">
+                    <div class="relative">
+                        <img src="https://images.pixabay.com/photo/2016/08/11/08/04/vegetables-1584999_1280.jpg" alt="Pest control video" class="w-full h-48 object-cover" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                            <button class="bg-white bg-opacity-90 rounded-full p-4 hover:bg-opacity-100 transition-all">
+                                <svg class="h-8 w-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="absolute bottom-2 right-2 bg-black bg-opacity-70 text-white px-2 py-1 rounded text-sm">
+                            6:15
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-poppins font-semibold text-primary mb-2">Organic Pest Control Methods</h3>
+                        <p class="text-text-secondary text-sm mb-4">
+                            Natural solutions for common garden pests using ingredients available in Nairobi markets.
+                        </p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <img src="https://images.pixabay.com/photo/2016/11/21/12/42/beard-1845166_1280.jpg" alt="Expert Grace" class="w-8 h-8 rounded-full object-cover mr-2" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                <span class="text-sm font-medium text-primary">Grace Njeri</span>
+                            </div>
+                            <span class="text-sm text-text-secondary">3.2k views</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <button class="btn-primary">Watch All Tutorials</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="py-16 bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-poppins font-bold mb-4">Stay Growing with Us</h2>
+            <p class="text-lg text-primary-100 mb-8 max-w-2xl mx-auto">
+                Get weekly gardening tips, seasonal reminders, and exclusive content delivered to your inbox
+            </p>
+            <div class="max-w-md mx-auto">
+                <div class="flex">
+                    <input type="email" placeholder="Enter your email" class="flex-1 px-4 py-3 rounded-l-lg border-0 text-text-primary" />
+                    <button class="bg-accent hover:bg-accent-600 px-6 py-3 rounded-r-lg font-poppins font-semibold transition-colors">
+                        Subscribe
+                    </button>
+                </div>
+                <p class="text-primary-200 text-sm mt-2">Join 15,000+ gardeners already growing with us</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary-800 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center mb-4">
+                        <svg class="h-8 w-8 text-accent" viewBox="0 0 40 40" fill="currentColor">
+                            <path d="M20 2C15.5 2 12 5.5 12 10c0 2.5 1 4.8 2.6 6.5L20 22l5.4-5.5C27 14.8 28 12.5 28 10c0-4.5-3.5-8-8-8zm0 11c-1.7 0-3-1.3-3-3s1.3-3 3-3 3 1.3 3 3-1.3 3-3 3z"/>
+                            <path d="M8 25c0-2 1.5-3.5 3.5-3.5h17c2 0 3.5 1.5 3.5 3.5v10c0 2-1.5 3.5-3.5 3.5h-17C9.5 38.5 8 37 8 35V25z"/>
+                            <circle cx="15" cy="30" r="2" fill="white"/>
+                            <circle cx="25" cy="30" r="2" fill="white"/>
+                        </svg>
+                        <span class="ml-2 text-xl font-poppins font-bold">GreenGrove Market</span>
+                    </div>
+                    <p class="text-primary-200 mb-4">Living Fresh, Growing Forward</p>
+                    <p class="text-primary-300 text-sm">Kenya's premier seed-to-table ecosystem, connecting you with fresh groceries and expert garden services.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-poppins font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="product_marketplace.html" class="text-primary-200 hover:text-white transition-colors">Shop Groceries</a></li>
+                        <li><a href="garden_services_hub.html" class="text-primary-200 hover:text-white transition-colors">Garden Services</a></li>
+                        <li><a href="knowledge_center.html" class="text-primary-200 hover:text-white transition-colors">Knowledge Center</a></li>
+                        <li><a href="customer_dashboard.html" class="text-primary-200 hover:text-white transition-colors">My Account</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h3 class="font-poppins font-semibold mb-4">Support</h3>
+                    <ul class="space-y-2">
+                        <li><a href="contact_support.html" class="text-primary-200 hover:text-white transition-colors">Contact Us</a></li>
+                        <li><a href="javascript:void(0)" class="text-primary-200 hover:text-white transition-colors">FAQ</a></li>
+                        <li><a href="javascript:void(0)" class="text-primary-200 hover:text-white transition-colors">Delivery Info</a></li>
+                        <li><a href="javascript:void(0)" class="text-primary-200 hover:text-white transition-colors">Returns</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="font-poppins font-semibold mb-4">Contact</h3>
+                    <div class="space-y-2 text-primary-200">
+                        <p class="flex items-center">
+                            <svg class="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                            </svg>
+                            +254 700 123 456
+                        </p>
+                        <p class="flex items-center">
+                            <svg class="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                            hello@greengrove.co.ke
+                        </p>
+                        <p class="flex items-start">
+                            <svg class="h-4 w-4 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                            Westlands, Nairobi, Kenya
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-primary-700 mt-8 pt-8 text-center">
+                <p class="text-primary-300">© 2025 GreenGrove Market. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Bottom Navigation -->
+    <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-border-light md:hidden z-40">
+        <div class="grid grid-cols-4 gap-1">
+            <a href="homepage.html" class="flex flex-col items-center py-2 px-1 text-text-secondary">
+                <svg class="h-6 w-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                </svg>
+                <span class="text-xs font-medium">Home</span>
+            </a>
+            <a href="product_marketplace.html" class="flex flex-col items-center py-2 px-1 text-text-secondary">
+                <svg class="h-6 w-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 2.5M7 13l2.5 2.5m6 0L19 18H7"/>
+                </svg>
+                <span class="text-xs font-medium">Shop</span>
+            </a>
+            <a href="garden_services_hub.html" class="flex flex-col items-center py-2 px-1 text-text-secondary">
+                <svg class="h-6 w-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707"/>
+                </svg>
+                <span class="text-xs font-medium">Garden</span>
+            </a>
+            <a href="knowledge_center.html" class="flex flex-col items-center py-2 px-1 text-primary">
+                <svg class="h-6 w-6 mb-1" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                </svg>
+                <span class="text-xs font-medium">Knowledge</span>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Category filtering
+        document.addEventListener('DOMContentLoaded', function() {
+            const categoryButtons = document.querySelectorAll('.category-btn');
+            const sections = {
+                'seasonal': document.getElementById('seasonal-section'),
+                'guides': document.getElementById('guides-section'),
+                'pest': document.getElementById('pest-section'),
+                'recipes': document.getElementById('recipes-section'),
+                'videos': document.getElementById('videos-section'),
+                'forum': document.getElementById('forum-section')
+            };
+
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const category = this.dataset.category;
+                    
+                    // Update active button
+                    categoryButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Show/hide sections
+                    if (category === 'all') {
+                        Object.values(sections).forEach(section => {
+                            if (section) section.style.display = 'block';
+                        });
+                    } else {
+                        Object.entries(sections).forEach(([key, section]) => {
+                            if (section) {
+                                section.style.display = key === category ? 'block' : 'none';
+                            }
+                        });
+                    }
+                });
+            });
+        });
+
+        // Search functionality
+        document.getElementById('searchInput').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            // Implement search logic here
+            console.log('Searching for:', searchTerm);
+        });
+
+        // Bookmark functionality
+        document.querySelectorAll('button[title="Bookmark"]').forEach(button => {
+            button.addEventListener('click', function() {
+                this.classList.toggle('text-accent');
+                this.classList.toggle('text-text-secondary');
+            });
+        });
+
+        // Share functionality for WhatsApp
+        function shareToWhatsApp(title, url) {
+            const text = encodeURIComponent(`Check out this gardening guide: ${title} - ${url}`);
+            window.open(`https://wa.me/?text=${text}`, '_blank');
+        }
+
+        // Offline reading capability (basic implementation)
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js').then(function(registration) {
+                console.log('ServiceWorker registration successful');
+            }).catch(function(err) {
+                console.log('ServiceWorker registration failed');
+            });
+        }
+    </script>
+
+    <style>
+        .category-btn {
+            @apply px-4 py-2 rounded-full border border-border-light text-text-secondary hover:border-accent hover:text-accent transition-colors;
+        }
+        
+        .category-btn.active {
+            @apply bg-accent text-white border-accent;
+        }
+        
+        /* Offline indicator */
+        .offline-indicator {
+            @apply fixed top-20 left-4 bg-warning text-white px-3 py-1 rounded text-sm z-50;
+            display: none;
+        }
+        
+        body.offline .offline-indicator {
+            display: block;
+        }
+        
+        /* Video play button hover effect */
+        .video-play-btn:hover {
+            transform: scale(1.1);
+        }
+        
+        /* Smooth scrolling for anchor links */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Custom scrollbar for mobile */
+        @media (max-width: 768px) {
+            ::-webkit-scrollbar {
+                width: 4px;
+            }
+            
+            ::-webkit-scrollbar-track {
+                background: #f1f1f1;
+            }
+            
+            ::-webkit-scrollbar-thumb {
+                background: var(--color-accent);
+                border-radius: 2px;
+            }
+        }
+    </style>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>

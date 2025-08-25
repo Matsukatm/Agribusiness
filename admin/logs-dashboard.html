@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backend Process Logs - GreenGrove Market Admin</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <style>
+        .log-entry {
+            border-left: 4px solid #4CAF50;
+            transition: all 0.2s ease;
+        }
+        .log-entry.error {
+            border-left-color: #E57373;
+        }
+        .log-entry.warning {
+            border-left-color: #FFA726;
+        }
+        .log-viewer {
+            max-height: 600px;
+            overflow-y: auto;
+            font-family: 'Courier New', monospace;
+        }
+        .stats-card {
+            background: linear-gradient(135deg, #2D5A27 0%, #4A7C59 100%);
+        }
+    </style>
+</head>
+<body class="bg-surface">
+    <!-- Header -->
+    <header class="bg-white shadow-sm border-b border-border-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <svg class="h-8 w-8 text-primary mr-3" viewBox="0 0 40 40" fill="currentColor">
+                        <path d="M20 2C15.5 2 12 5.5 12 10c0 2.5 1 4.8 2.6 6.5L20 22l5.4-5.5C27 14.8 28 12.5 28 10c0-4.5-3.5-8-8-8zm0 11c-1.7 0-3-1.3-3-3s1.3-3 3-3 3 1.3 3 3-1.3 3-3 3z"/>
+                        <path d="M8 25c0-2 1.5-3.5 3.5-3.5h17c2 0 3.5 1.5 3.5 3.5v10c0 2-1.5 3.5-3.5 3.5h-17C9.5 38.5 8 37 8 35V25z"/>
+                    </svg>
+                    <h1 class="text-xl font-poppins font-bold text-primary">Backend Process Logs</h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button id="refreshLogs" class="btn-secondary">
+                        <svg class="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                        </svg>
+                        Refresh
+                    </button>
+                    <button id="exportLogs" class="btn-primary">
+                        <svg class="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                        Export
+                    </button>
+                    <button id="clearLogs" class="bg-error hover:bg-error-600 text-white px-4 py-2 rounded-lg">
+                        <svg class="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+                        </svg>
+                        Clear
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Stats Overview -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
+            <div class="stats-card text-white p-6 rounded-lg">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-primary-100 text-sm">Total Logs</p>
+                        <p class="text-2xl font-bold" id="totalLogs">0</p>
+                    </div>
+                    <svg class="h-8 w-8 text-primary-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="bg-success text-white p-6 rounded-lg">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-success-100 text-sm">Success Events</p>
+                        <p class="text-2xl font-bold" id="successLogs">0</p>
+                    </div>
+                    <svg class="h-8 w-8 text-success-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="bg-warning text-white p-6 rounded-lg">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-warning-100 text-sm">Warnings</p>
+                        <p class="text-2xl font-bold" id="warningLogs">0</p>
+                    </div>
+                    <svg class="h-8 w-8 text-warning-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"/>
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="bg-error text-white p-6 rounded-lg">
+                <div class="flex items-center justify-between">
+                    <div>
+                        <p class="text-error-100 text-sm">Errors</p>
+                        <p class="text-2xl font-bold" id="errorLogs">0</p>
+                    </div>
+                    <svg class="h-8 w-8 text-error-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filters -->
+        <div class="bg-white rounded-lg shadow-sm p-6 mb-6">
+            <div class="flex flex-wrap gap-4 items-center">
+                <div class="flex items-center space-x-2">
+                    <label for="logLevel" class="text-sm font-medium text-text-primary">Level:</label>
+                    <select id="logLevel" class="input-field">
+                        <option value="all">All Levels</option>
+                        <option value="info">Info</option>
+                        <option value="success">Success</option>
+                        <option value="warning">Warning</option>
+                        <option value="error">Error</option>
+                    </select>
+                </div>
+                
+                <div class="flex items-center space-x-2">
+                    <label for="timeRange" class="text-sm font-medium text-text-primary">Time Range:</label>
+                    <select id="timeRange" class="input-field">
+                        <option value="all">All Time</option>
+                        <option value="1h">Last Hour</option>
+                        <option value="24h">Last 24 Hours</option>
+                        <option value="7d">Last 7 Days</option>
+                    </select>
+                </div>
+                
+                <div class="flex items-center space-x-2">
+                    <label for="searchLogs" class="text-sm font-medium text-text-primary">Search:</label>
+                    <input type="text" id="searchLogs" placeholder="Search logs..." class="input-field">
+                </div>
+                
+                <button id="applyFilters" class="btn-primary">Apply Filters</button>
+            </div>
+        </div>
+
+        <!-- Log Viewer -->
+        <div class="bg-white rounded-lg shadow-sm">
+            <div class="p-4 border-b border-border-light">
+                <h2 class="text-lg font-poppins font-semibold text-primary">Live Log Stream</h2>
+                <p class="text-sm text-text-secondary">Real-time backend process monitoring</p>
+            </div>
+            
+            <div class="log-viewer p-4" id="logContainer">
+                <div class="text-center text-text-secondary py-8">
+                    <svg class="h-12 w-12 mx-auto mb-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                    </svg>
+                    <p>No logs available. Start using the application to see backend processes.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- System Information -->
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-white rounded-lg shadow-sm p-6">
+                <h3 class="text-lg font-poppins font-semibold text-primary mb-4">System Information</h3>
+                <div class="space-y-3">
+                    <div class="flex justify-between">
+                        <span class="text-text-secondary">Browser:</span>
+                        <span class="text-text-primary" id="browserInfo">-</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-text-secondary">Platform:</span>
+                        <span class="text-text-primary" id="platformInfo">-</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-text-secondary">Screen Resolution:</span>
+                        <span class="text-text-primary" id="screenInfo">-</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-text-secondary">Connection:</span>
+                        <span class="text-text-primary" id="connectionInfo">-</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-white rounded-lg shadow-sm p-6">
+                <h3 class="text-lg font-poppins font-semibold text-primary mb-4">Storage Usage</h3>
+                <div class="space-y-3">
+                    <div class="flex justify-between">
+                        <span class="text-text-secondary">Logs Storage:</span>
+                        <span class="text-text-primary" id="logsStorage">-</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-text-secondary">Error Logs:</span>
+                        <span class="text-text-primary" id="errorStorage">-</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-text-secondary">Cart Data:</span>
+                        <span class="text-text-primary" id="cartStorage">-</span>
+                    </div>
+                    <div class="flex justify-between">
+                        <span class="text-text-secondary">Total Used:</span>
+                        <span class="text-text-primary font-semibold" id="totalStorage">-</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        class LogsDashboard {
+            constructor() {
+                this.logs = [];
+                this.filteredLogs = [];
+                this.autoRefresh = true;
+                this.refreshInterval = 5000; // 5 seconds
+                this.init();
+            }
+
+            init() {
+                this.setupEventListeners();
+                this.loadLogs();
+                this.updateSystemInfo();
+                this.startAutoRefresh();
+            }
+
+            setupEventListeners() {
+                document.getElementById('refreshLogs').addEventListener('click', () => this.loadLogs());
+                document.getElementById('exportLogs').addEventListener('click', () => this.exportLogs());
+                document.getElementById('clearLogs').addEventListener('click', () => this.clearLogs());
+                document.getElementById('applyFilters').addEventListener('click', () => this.applyFilters());
+                
+                // Real-time search
+                document.getElementById('searchLogs').addEventListener('input', (e) => {
+                    this.searchLogs(e.target.value);
+                });
+            }
+
+            loadLogs() {
+                // Load from localStorage
+                const logs = JSON.parse(localStorage.getItem('greengrove_logs')) || [];
+                const errorLogs = JSON.parse(localStorage.getItem('greengrove_error_logs')) || [];
+                
+                // Combine and sort logs
+                this.logs = [...logs, ...errorLogs].sort((a, b) => 
+                    new Date(b.timestamp) - new Date(a.timestamp)
+                );
+                
+                this.updateStats();
+                this.applyFilters();
+            }
+
+            updateStats() {
+                const total = this.logs.length;
+                const success = this.logs.filter(log => 
+                    log.action?.includes('success') || log.type === 'success'
+                ).length;
+                const warnings = this.logs.filter(log => 
+                    log.action?.includes('warning') || log.type === 'warning'
+                ).length;
+                const errors = this.logs.filter(log => 
+                    log.action?.includes('error') || log.type === 'error' || log.type?.includes('Error')
+                ).length;
+
+                document.getElementById('totalLogs').textContent = total.toLocaleString();
+                document.getElementById('successLogs').textContent = success.toLocaleString();
+                document.getElementById('warningLogs').textContent = warnings.toLocaleString();
+                document.getElementById('errorLogs').textContent = errors.toLocaleString();
+            }
+
+            applyFilters() {
+                const level = document.getElementById('logLevel').value;
+                const timeRange = document.getElementById('timeRange').value;
+                const searchTerm = document.getElementById('searchLogs').value.toLowerCase();
+
+                let filtered = [...this.logs];
+
+                // Filter by level
+                if (level !== 'all') {
+                    filtered = filtered.filter(log => {
+                        const logLevel = this.getLogLevel(log);
+                        return logLevel === level;
+                    });
+                }
+
+                // Filter by time range
+                if (timeRange !== 'all') {
+                    const now = new Date();
+                    const cutoff = new Date();
+                    
+                    switch (timeRange) {
+                        case '1h':
+                            cutoff.setHours(now.getHours() - 1);
+                            break;
+                        case '24h':
+                            cutoff.setDate(now.getDate() - 1);
+                            break;
+                        case '7d':
+                            cutoff.setDate(now.getDate() - 7);
+                            break;
+                    }
+                    
+                    filtered = filtered.filter(log => 
+                        new Date(log.timestamp) >= cutoff
+                    );
+                }
+
+                // Filter by search term
+                if (searchTerm) {
+                    filtered = filtered.filter(log => 
+                        JSON.stringify(log).toLowerCase().includes(searchTerm)
+                    );
+                }
+
+                this.filteredLogs = filtered;
+                this.renderLogs();
+            }
+
+            searchLogs(term) {
+                if (!term) {
+                    this.applyFilters();
+                    return;
+                }
+
+                const filtered = this.logs.filter(log => 
+                    JSON.stringify(log).toLowerCase().includes(term.toLowerCase())
+                );
+                
+                this.filteredLogs = filtered;
+                this.renderLogs();
+            }
+
+            getLogLevel(log) {
+                if (log.type?.includes('Error') || log.action?.includes('error')) return 'error';
+                if (log.action?.includes('warning')) return 'warning';
+                if (log.action?.includes('success')) return 'success';
+                return 'info';
+            }
+
+            renderLogs() {
+                const container = document.getElementById('logContainer');
+                
+                if (this.filteredLogs.length === 0) {
+                    container.innerHTML = `
+                        <div class="text-center text-text-secondary py-8">
+                            <svg class="h-12 w-12 mx-auto mb-4 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                            </svg>
+                            <p>No logs match the current filters.</p>
+                        </div>
+                    `;
+                    return;
+                }
+
+                const logsHtml = this.filteredLogs.map(log => {
+                    const level = this.getLogLevel(log);
+                    const levelClass = level === 'error' ? 'error' : level === 'warning' ? 'warning' : '';
+                    const timestamp = new Date(log.timestamp).toLocaleString();
+                    
+                    return `
+                        <div class="log-entry ${levelClass} bg-surface p-4 mb-2 rounded border-l-4">
+                            <div class="flex justify-between items-start mb-2">
+                                <div class="flex items-center space-x-2">
+                                    <span class="inline-block w-2 h-2 rounded-full ${
+                                        level === 'error' ? 'bg-error' : 
+                                        level === 'warning' ? 'bg-warning' : 'bg-success'
+                                    }"></span>
+                                    <span class="font-medium text-text-primary">
+                                        ${log.action || log.type || 'System Event'}
+                                    </span>
+                                </div>
+                                <span class="text-xs text-text-secondary">${timestamp}</span>
+                            </div>
+                            
+                            ${log.data ? `
+                                <div class="text-sm text-text-secondary mb-2">
+                                    <pre class="whitespace-pre-wrap">${JSON.stringify(log.data, null, 2)}</pre>
+                                </div>
+                            ` : ''}
+                            
+                            <div class="text-xs text-text-secondary">
+                                <span>URL: ${log.url || 'N/A'}</span>
+                                ${log.userAgent ? `<br><span>User Agent: ${log.userAgent.substring(0, 50)}...</span>` : ''}
+                            </div>
+                        </div>
+                    `;
+                }).join('');
+
+                container.innerHTML = logsHtml;
+            }
+
+            exportLogs() {
+                const dataStr = JSON.stringify(this.filteredLogs, null, 2);
+                const dataBlob = new Blob([dataStr], { type: 'application/json' });
+                
+                const link = document.createElement('a');
+                link.href = URL.createObjectURL(dataBlob);
+                link.download = `greengrove-logs-${new Date().toISOString().split('T')[0]}.json`;
+                link.click();
+            }
+
+            clearLogs() {
+                if (confirm('Are you sure you want to clear all logs? This action cannot be undone.')) {
+                    localStorage.removeItem('greengrove_logs');
+                    localStorage.removeItem('greengrove_error_logs');
+                    this.loadLogs();
+                }
+            }
+
+            updateSystemInfo() {
+                document.getElementById('browserInfo').textContent = navigator.userAgent.split(' ').pop();
+                document.getElementById('platformInfo').textContent = navigator.platform;
+                document.getElementById('screenInfo').textContent = `${screen.width}x${screen.height}`;
+                document.getElementById('connectionInfo').textContent = navigator.onLine ? 'Online' : 'Offline';
+
+                // Storage usage
+                const logsSize = (localStorage.getItem('greengrove_logs') || '').length;
+                const errorSize = (localStorage.getItem('greengrove_error_logs') || '').length;
+                const cartSize = (localStorage.getItem('greengrove_cart') || '').length;
+                const total = logsSize + errorSize + cartSize;
+
+                document.getElementById('logsStorage').textContent = this.formatBytes(logsSize);
+                document.getElementById('errorStorage').textContent = this.formatBytes(errorSize);
+                document.getElementById('cartStorage').textContent = this.formatBytes(cartSize);
+                document.getElementById('totalStorage').textContent = this.formatBytes(total);
+            }
+
+            formatBytes(bytes) {
+                if (bytes === 0) return '0 B';
+                const k = 1024;
+                const sizes = ['B', 'KB', 'MB', 'GB'];
+                const i = Math.floor(Math.log(bytes) / Math.log(k));
+                return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
+            }
+
+            startAutoRefresh() {
+                setInterval(() => {
+                    if (this.autoRefresh) {
+                        this.loadLogs();
+                        this.updateSystemInfo();
+                    }
+                }, this.refreshInterval);
+            }
+        }
+
+        // Initialize dashboard when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            new LogsDashboard();
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>

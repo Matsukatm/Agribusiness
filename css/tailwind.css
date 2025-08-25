@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Colors */
+  --color-primary: #2D5A27; /* Deep forest green */
+  --color-primary-50: #F0F4EF; /* Very light forest green */
+  --color-primary-100: #D4E2D1; /* Light forest green */
+  --color-primary-200: #A9C5A3; /* Medium light forest green */
+  --color-primary-300: #7EA875; /* Medium forest green */
+  --color-primary-400: #538B47; /* Medium dark forest green */
+  --color-primary-500: #2D5A27; /* Deep forest green - base */
+  --color-primary-600: #244819; /* Darker forest green */
+  --color-primary-700: #1B360B; /* Very dark forest green */
+  --color-primary-800: #122400; /* Almost black forest green */
+  --color-primary-900: #091200; /* Black forest green */
+
+  /* Secondary Colors */
+  --color-secondary: #4A7C59; /* Growing confidence green */
+  --color-secondary-50: #F2F6F3; /* Very light secondary green */
+  --color-secondary-100: #D8E6DC; /* Light secondary green */
+  --color-secondary-200: #B1CDB9; /* Medium light secondary green */
+  --color-secondary-300: #8AB496; /* Medium secondary green */
+  --color-secondary-400: #639B73; /* Medium dark secondary green */
+  --color-secondary-500: #4A7C59; /* Growing confidence green - base */
+  --color-secondary-600: #3C6347; /* Darker secondary green */
+  --color-secondary-700: #2E4A35; /* Very dark secondary green */
+  --color-secondary-800: #203123; /* Almost black secondary green */
+  --color-secondary-900: #121811; /* Black secondary green */
+
+  /* Accent Colors */
+  --color-accent: #FF6B35; /* Harvest excitement orange */
+  --color-accent-50: #FFF4F0; /* Very light orange */
+  --color-accent-100: #FFE0D1; /* Light orange */
+  --color-accent-200: #FFC1A3; /* Medium light orange */
+  --color-accent-300: #FFA275; /* Medium orange */
+  --color-accent-400: #FF8347; /* Medium dark orange */
+  --color-accent-500: #FF6B35; /* Harvest excitement orange - base */
+  --color-accent-600: #E5522A; /* Darker orange */
+  --color-accent-700: #CC391F; /* Very dark orange */
+  --color-accent-800: #B22014; /* Almost black orange */
+  --color-accent-900: #990709; /* Black orange */
+
+  /* Background Colors */
+  --color-background: #FEFEFE; /* Clean canvas white */
+  --color-surface: #F8F9F7; /* Subtle depth off-white */
+
+  /* Text Colors */
+  --color-text-primary: #1A1A1A; /* High contrast black */
+  --color-text-secondary: #666666; /* Medium gray */
+
+  /* Status Colors */
+  --color-success: #4CAF50; /* Growth celebration green */
+  --color-success-50: #E8F5E8; /* Very light success green */
+  --color-success-100: #C8E6C9; /* Light success green */
+  --color-success-200: #A5D6A7; /* Medium light success green */
+  --color-success-300: #81C784; /* Medium success green */
+  --color-success-400: #66BB6A; /* Medium dark success green */
+  --color-success-500: #4CAF50; /* Growth celebration green - base */
+  --color-success-600: #43A047; /* Darker success green */
+  --color-success-700: #388E3C; /* Very dark success green */
+  --color-success-800: #2E7D32; /* Almost black success green */
+  --color-success-900: #1B5E20; /* Black success green */
+
+  --color-warning: #FFA726; /* Gentle attention orange */
+  --color-warning-50: #FFF8E1; /* Very light warning orange */
+  --color-warning-100: #FFECB3; /* Light warning orange */
+  --color-warning-200: #FFE082; /* Medium light warning orange */
+  --color-warning-300: #FFD54F; /* Medium warning orange */
+  --color-warning-400: #FFCC02; /* Medium dark warning orange */
+  --color-warning-500: #FFA726; /* Gentle attention orange - base */
+  --color-warning-600: #FB8C00; /* Darker warning orange */
+  --color-warning-700: #F57C00; /* Very dark warning orange */
+  --color-warning-800: #EF6C00; /* Almost black warning orange */
+  --color-warning-900: #E65100; /* Black warning orange */
+
+  --color-error: #E57373; /* Helpful guidance red */
+  --color-error-50: #FFEBEE; /* Very light error red */
+  --color-error-100: #FFCDD2; /* Light error red */
+  --color-error-200: #EF9A9A; /* Medium light error red */
+  --color-error-300: #E57373; /* Helpful guidance red - base */
+  --color-error-400: #EF5350; /* Medium dark error red */
+  --color-error-500: #F44336; /* Medium error red */
+  --color-error-600: #E53935; /* Darker error red */
+  --color-error-700: #D32F2F; /* Very dark error red */
+  --color-error-800: #C62828; /* Almost black error red */
+  --color-error-900: #B71C1C; /* Black error red */
+
+  /* Border Colors */
+  --color-border-light: #E8E8E8; /* Light gray border */
+  --color-border-accent: #FF6B35; /* Accent orange border */
+
+  /* Shadow Colors */
+  --shadow-primary: rgba(45, 90, 39, 0.08); /* Primary shadow */
+  --shadow-primary-strong: rgba(45, 90, 39, 0.12); /* Strong primary shadow */
+}
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+    color: var(--color-text-primary);
+    background-color: var(--color-background);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-accent hover:bg-accent-600 text-white font-poppins font-semibold px-6 py-3 rounded-lg transition-all duration-300 ease-out shadow-lg hover:shadow-xl;
+  }
+
+  .btn-secondary {
+    @apply bg-secondary hover:bg-secondary-600 text-white font-poppins font-semibold px-6 py-3 rounded-lg transition-all duration-300 ease-out;
+  }
+
+  .card {
+    @apply bg-surface rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 ease-out;
+  }
+
+  .input-field {
+    @apply border border-border-light rounded-lg px-4 py-3 focus:border-accent focus:outline-none transition-colors duration-200 ease-out;
+  }
+}

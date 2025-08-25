@@ -1,0 +1,41 @@
+{
+  "name": "greengrove-market",
+  "version": "1.0.0",
+  "description": "GreenGrove Market - Static frontend with API server",
+  "main": "index.html",
+  "dependencies": {
+    "@dhiwise/component-tagger": "^1.0.10",
+    "@tailwindcss/forms": "^0.5.7",
+    "tailwindcss-animate": "^1.0.7",
+    "tailwindcss-elevation": "^2.0.0",
+    "tailwindcss-fluid-type": "^2.0.7",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0",
+    "mysql2": "^3.11.3"
+  },
+  "scripts": {
+    "build:css": "npx @dhiwise/component-tagger && npx tailwindcss -i ./css/tailwind.css -o ./css/main.css",
+    "watch:css": "npx @dhiwise/component-tagger && npx tailwindcss -i ./css/tailwind.css -o ./css/main.css --watch",
+    "dev": "concurrently \"npm run watch:css\" \"npm run serve\" \"npm run api\"",
+    "serve": "live-server --port=3000 --open=pages/homepage.html",
+    "api": "node server/index.js",
+    "build": "npm run build:css && node build/optimize.js",
+    "optimize:images": "node build/optimize.js",
+    "logs:export": "node -e \"console.log('Logs exported via browser console')\"",
+    "logs:clear": "node -e \"console.log('Logs cleared via browser console')\""
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "tailwindcss": "^3.4.17",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/container-queries": "^0.1.1",
+    "@tailwindcss/line-clamp": "^0.1.0",
+    "@tailwindcss/typography": "^0.5.16",
+    "concurrently": "^8.2.2",
+    "live-server": "^1.2.2"
+  }
+}

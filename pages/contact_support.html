@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact & Support - GreenGrove Market</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <meta name="description" content="Get in touch with GreenGrove Market. Multiple support channels, FAQ, and customer service for fresh groceries and garden services in Nairobi." />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fgreengrove7653back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"></script>
+</head>
+<body class="bg-background">
+    <!-- Header Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <svg class="h-10 w-10 text-primary" viewBox="0 0 40 40" fill="currentColor">
+                        <path d="M20 2C15.5 2 12 5.5 12 10c0 2.5 1 4.8 2.6 6.5L20 22l5.4-5.5C27 14.8 28 12.5 28 10c0-4.5-3.5-8-8-8zm0 11c-1.7 0-3-1.3-3-3s1.3-3 3-3 3 1.3 3 3-1.3 3-3 3z"/>
+                        <path d="M8 25c0-2 1.5-3.5 3.5-3.5h17c2 0 3.5 1.5 3.5 3.5v10c0 2-1.5 3.5-3.5 3.5h-17C9.5 38.5 8 37 8 35V25z"/>
+                        <circle cx="15" cy="30" r="2" fill="white"/>
+                        <circle cx="25" cy="30" r="2" fill="white"/>
+                    </svg>
+                    <span class="ml-3 text-xl font-poppins font-bold text-primary">GreenGrove Market</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="homepage.html" class="text-text-secondary hover:text-primary transition-colors">Home</a>
+                    <a href="product_marketplace.html" class="text-text-secondary hover:text-primary transition-colors">Shop Groceries</a>
+                    <a href="garden_services_hub.html" class="text-text-secondary hover:text-primary transition-colors">Garden Services</a>
+                    <a href="knowledge_center.html" class="text-text-secondary hover:text-primary transition-colors">Knowledge Center</a>
+                    <a href="customer_dashboard.html" class="text-text-secondary hover:text-primary transition-colors">My Account</a>
+                    <a href="contact_support.html" class="text-primary font-medium hover:text-secondary transition-colors">Support</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden p-2" onclick="toggleMobileMenu()">
+                    <svg class="h-6 w-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation Menu -->
+            <div id="mobileMenu" class="hidden md:hidden pb-4">
+                <div class="flex flex-col space-y-3">
+                    <a href="homepage.html" class="text-text-secondary hover:text-primary transition-colors py-2">Home</a>
+                    <a href="product_marketplace.html" class="text-text-secondary hover:text-primary transition-colors py-2">Shop Groceries</a>
+                    <a href="garden_services_hub.html" class="text-text-secondary hover:text-primary transition-colors py-2">Garden Services</a>
+                    <a href="knowledge_center.html" class="text-text-secondary hover:text-primary transition-colors py-2">Knowledge Center</a>
+                    <a href="customer_dashboard.html" class="text-text-secondary hover:text-primary transition-colors py-2">My Account</a>
+                    <a href="contact_support.html" class="text-primary font-medium py-2">Support</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-primary-50 to-secondary-50 py-12 lg:py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl lg:text-5xl font-poppins font-bold text-primary mb-4">
+                    We're Here to Help
+                </h1>
+                <p class="text-lg text-text-secondary max-w-2xl mx-auto mb-8">
+                    Get support for your orders, garden services, or any questions about GreenGrove Market. Our team is ready to assist you.
+                </p>
+                
+                <!-- Quick Contact Options -->
+                <div class="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+                    <!-- WhatsApp -->
+                    <a href="https://wa.me/254700123456" class="card p-6 hover:shadow-lg transition-all duration-300 group">
+                        <div class="bg-success-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-success-200 transition-colors">
+                            <svg class="h-8 w-8 text-success" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.516"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-poppins font-semibold text-primary mb-2">WhatsApp Chat</h3>
+                        <p class="text-text-secondary text-sm mb-3">Instant messaging support</p>
+                        <p class="text-success font-medium text-sm">Available 7 AM - 8 PM EAT</p>
+                    </a>
+
+                    <!-- Phone -->
+                    <a href="tel:+254700123456" class="card p-6 hover:shadow-lg transition-all duration-300 group">
+                        <div class="bg-accent-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-accent-200 transition-colors">
+                            <svg class="h-8 w-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-poppins font-semibold text-primary mb-2">Call Us</h3>
+                        <p class="text-text-secondary text-sm mb-3">Direct phone support</p>
+                        <p class="text-accent font-medium text-sm">+254 700 123 456</p>
+                    </a>
+
+                    <!-- Email -->
+                    <a href="mailto:hello@greengrove.co.ke" class="card p-6 hover:shadow-lg transition-all duration-300 group">
+                        <div class="bg-secondary-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-secondary-200 transition-colors">
+                            <svg class="h-8 w-8 text-secondary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-poppins font-semibold text-primary mb-2">Email Support</h3>
+                        <p class="text-text-secondary text-sm mb-3">Detailed inquiries</p>
+                        <p class="text-secondary font-medium text-sm">24-48 hour response</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-poppins font-bold text-primary mb-4">Send Us a Message</h2>
+                <p class="text-lg text-text-secondary">
+                    Fill out the form below and we'll get back to you within 24 hours
+                </p>
+            </div>
+
+            <div class="card p-8">
+                <form id="contactForm" class="space-y-6">
+                    <!-- Personal Information -->
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="firstName" class="block text-sm font-medium text-primary mb-2">First Name *</label>
+                            <input type="text" id="firstName" name="firstName" required class="input-field w-full" placeholder="Enter your first name" />
+                        </div>
+                        <div>
+                            <label for="lastName" class="block text-sm font-medium text-primary mb-2">Last Name *</label>
+                            <input type="text" id="lastName" name="lastName" required class="input-field w-full" placeholder="Enter your last name" />
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-primary mb-2">Email Address *</label>
+                            <input type="email" id="email" name="email" required class="input-field w-full" placeholder="your.email@example.com" />
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-primary mb-2">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" class="input-field w-full" placeholder="+254 700 000 000" />
+                        </div>
+                    </div>
+
+                    <!-- Inquiry Type -->
+                    <div>
+                        <label for="inquiryType" class="block text-sm font-medium text-primary mb-2">Inquiry Type *</label>
+                        <select id="inquiryType" name="inquiryType" required class="input-field w-full">
+                            <option value>Select inquiry type</option>
+                            <option value="grocery-order">Grocery Orders & Delivery</option>
+                            <option value="garden-service">Garden Services & Booking</option>
+                            <option value="partnership">Partnership Opportunities</option>
+                            <option value="technical">Technical Support</option>
+                            <option value="billing">Billing & Payments</option>
+                            <option value="feedback">Feedback & Suggestions</option>
+                            <option value="general">General Questions</option>
+                        </select>
+                    </div>
+
+                    <!-- Order/Booking Reference -->
+                    <div>
+                        <label for="orderRef" class="block text-sm font-medium text-primary mb-2">Order/Booking Reference (if applicable)</label>
+                        <input type="text" id="orderRef" name="orderRef" class="input-field w-full" placeholder="e.g., GG-2025-001234" />
+                    </div>
+
+                    <!-- Message -->
+                    <div>
+                        <label for="message" class="block text-sm font-medium text-primary mb-2">Message *</label>
+                        <textarea id="message" name="message" rows="6" required class="input-field w-full resize-none" placeholder="Please describe your inquiry in detail..."></textarea>
+                    </div>
+
+                    <!-- File Upload -->
+                    <div>
+                        <label for="attachment" class="block text-sm font-medium text-primary mb-2">Attach Files (optional)</label>
+                        <div class="border-2 border-dashed border-border-light rounded-lg p-6 text-center hover:border-accent transition-colors">
+                            <input type="file" id="attachment" name="attachment" multiple class="hidden" accept="image/*,.pdf,.doc,.docx" />
+                            <label for="attachment" class="cursor-pointer">
+                                <svg class="h-12 w-12 text-text-secondary mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/>
+                                </svg>
+                                <p class="text-text-secondary">Click to upload files or drag and drop</p>
+                                <p class="text-sm text-text-secondary mt-2">PNG, JPG, PDF up to 10MB</p>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Priority Level -->
+                    <div>
+                        <label class="block text-sm font-medium text-primary mb-3">Priority Level</label>
+                        <div class="flex flex-wrap gap-4">
+                            <label class="flex items-center">
+                                <input type="radio" name="priority" value="low" class="text-accent focus:ring-accent" checked />
+                                <span class="ml-2 text-sm text-text-secondary">Low - General inquiry</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="radio" name="priority" value="medium" class="text-accent focus:ring-accent" />
+                                <span class="ml-2 text-sm text-text-secondary">Medium - Order/service issue</span>
+                            </label>
+                            <label class="flex items-center">
+                                <input type="radio" name="priority" value="high" class="text-accent focus:ring-accent" />
+                                <span class="ml-2 text-sm text-text-secondary">High - Urgent matter</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Newsletter Subscription -->
+                    <div class="flex items-center">
+                        <input type="checkbox" id="newsletter" name="newsletter" class="text-accent focus:ring-accent" />
+                        <label for="newsletter" class="ml-2 text-sm text-text-secondary">
+                            Subscribe to our newsletter for updates and gardening tips
+                        </label>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="text-center">
+                        <button type="submit" class="btn-primary w-full md:w-auto px-12">
+                            Send Message
+                        </button>
+                        <p class="text-sm text-text-secondary mt-3">
+                            Expected response time: 24-48 hours
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-surface">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-poppins font-bold text-primary mb-4">Frequently Asked Questions</h2>
+                <p class="text-lg text-text-secondary">
+                    Quick answers to common questions about our services
+                </p>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="card">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFAQ(this)">
+                        <span class="font-poppins font-semibold text-primary">What are your delivery times and areas?</span>
+                        <svg class="h-5 w-5 text-text-secondary transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="hidden px-6 pb-4">
+                        <p class="text-text-secondary">
+                            We deliver fresh groceries within 48 hours across Nairobi including Westlands, Karen, Kilimani, Lavington, and surrounding areas. Garden services are available throughout Nairobi County with plans to expand to Kiambu and Machakos counties in 2025.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="card">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFAQ(this)">
+                        <span class="font-poppins font-semibold text-primary">What payment methods do you accept?</span>
+                        <svg class="h-5 w-5 text-text-secondary transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="hidden px-6 pb-4">
+                        <p class="text-text-secondary">
+                            We accept M-Pesa (preferred), Visa, Mastercard, and bank transfers. For garden services, we offer flexible payment plans with 50% deposit and balance on completion. All transactions are secure and encrypted.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="card">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFAQ(this)">
+                        <span class="font-poppins font-semibold text-primary">What is your quality guarantee policy?</span>
+                        <svg class="h-5 w-5 text-text-secondary transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="hidden px-6 pb-4">
+                        <p class="text-secondary">
+                            We guarantee 100% freshness for all produce. If you're not satisfied, we offer full refund or replacement within 24 hours of delivery. Our garden services come with a 30-day satisfaction guarantee and 6-month plant health warranty.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="card">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFAQ(this)">
+                        <span class="font-poppins font-semibold text-primary">Can I cancel or reschedule my garden service booking?</span>
+                        <svg class="h-5 w-5 text-text-secondary transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="hidden px-6 pb-4">
+                        <p class="text-text-secondary">
+                            Yes, you can cancel or reschedule up to 24 hours before your appointment without charges. Same-day cancellations incur a 25% fee. Emergency rescheduling due to weather is always free.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="card">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFAQ(this)">
+                        <span class="font-poppins font-semibold text-primary">Do you offer bulk orders for businesses?</span>
+                        <svg class="h-5 w-5 text-text-secondary transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="hidden px-6 pb-4">
+                        <p class="text-text-secondary">
+                            Absolutely! We provide bulk grocery supplies for restaurants, hotels, schools, and offices with special pricing and dedicated account management. Contact us for custom quotes and delivery schedules.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="card">
+                    <button class="w-full px-6 py-4 text-left flex justify-between items-center focus:outline-none" onclick="toggleFAQ(this)">
+                        <span class="font-poppins font-semibold text-primary">What happens if I'm not home during delivery?</span>
+                        <svg class="h-5 w-5 text-text-secondary transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                        </svg>
+                    </button>
+                    <div class="hidden px-6 pb-4">
+                        <p class="text-text-secondary">
+                            Our delivery team will call 30 minutes before arrival. If you're unavailable, we can leave items with a trusted neighbor, security guard, or reschedule for the next available slot at no extra charge.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Areas & Location -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-poppins font-bold text-primary mb-4">Our Service Areas</h2>
+                <p class="text-lg text-text-secondary">
+                    Currently serving Nairobi with expansion plans across Kenya
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-start">
+                <!-- Service Coverage -->
+                <div>
+                    <h3 class="text-2xl font-poppins font-semibold text-primary mb-6">Delivery Coverage</h3>
+                    
+                    <!-- Current Areas -->
+                    <div class="mb-8">
+                        <h4 class="font-poppins font-semibold text-secondary mb-4">✅ Currently Serving</h4>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="space-y-2">
+                                <p class="text-text-secondary flex items-center">
+                                    <svg class="h-4 w-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    Westlands
+                                </p>
+                                <p class="text-text-secondary flex items-center">
+                                    <svg class="h-4 w-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    Karen
+                                </p>
+                                <p class="text-text-secondary flex items-center">
+                                    <svg class="h-4 w-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    Kilimani
+                                </p>
+                                <p class="text-text-secondary flex items-center">
+                                    <svg class="h-4 w-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    Lavington
+                                </p>
+                            </div>
+                            <div class="space-y-2">
+                                <p class="text-text-secondary flex items-center">
+                                    <svg class="h-4 w-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    Runda
+                                </p>
+                                <p class="text-text-secondary flex items-center">
+                                    <svg class="h-4 w-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    Muthaiga
+                                </p>
+                                <p class="text-text-secondary flex items-center">
+                                    <svg class="h-4 w-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    Parklands
+                                </p>
+                                <p class="text-text-secondary flex items-center">
+                                    <svg class="h-4 w-4 text-success mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                    </svg>
+                                    Hurlingham
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Coming Soon -->
+                    <div>
+                        <h4 class="font-poppins font-semibold text-accent mb-4">🚀 Expanding Soon (2025)</h4>
+                        <div class="grid md:grid-cols-2 gap-4">
+                            <div class="space-y-2">
+                                <p class="text-text-secondary flex items-center">
+                                    <svg class="h-4 w-4 text-warning mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                                    </svg>
+                                    Kiambu County
+                                </p>
+                                <p class="text-text-secondary flex items-center">
+                                    <svg class="h-4 w-4 text-warning mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                                    </svg>
+                                    Machakos County
+                                </p>
+                            </div>
+                            <div class="space-y-2">
+                                <p class="text-text-secondary flex items-center">
+                                    <svg class="h-4 w-4 text-warning mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                                    </svg>
+                                    Kajiado County
+                                </p>
+                                <p class="text-text-secondary flex items-center">
+                                    <svg class="h-4 w-4 text-warning mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                                    </svg>
+                                    Nakuru County
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Physical Location -->
+                <div>
+                    <h3 class="text-2xl font-poppins font-semibold text-primary mb-6">Visit Our Office</h3>
+                    
+                    <div class="card p-6 mb-6">
+                        <div class="flex items-start space-x-4">
+                            <div class="bg-primary-100 p-3 rounded-lg">
+                                <svg class="h-6 w-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h4 class="font-poppins font-semibold text-primary mb-2">GreenGrove Market HQ</h4>
+                                <p class="text-text-secondary mb-2">
+                                    Westlands Square, 2nd Floor<br />
+                                    Ring Road Westlands<br />
+                                    Nairobi, Kenya
+                                </p>
+                                <p class="text-sm text-text-secondary">
+                                    <strong>Landmark:</strong> Opposite Sarit Centre, near KFC
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Business Hours -->
+                    <div class="card p-6">
+                        <h4 class="font-poppins font-semibold text-primary mb-4">Business Hours</h4>
+                        <div class="space-y-2">
+                            <div class="flex justify-between">
+                                <span class="text-text-secondary">Monday - Friday</span>
+                                <span class="text-primary font-medium">8:00 AM - 6:00 PM</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-text-secondary">Saturday</span>
+                                <span class="text-primary font-medium">9:00 AM - 4:00 PM</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-text-secondary">Sunday</span>
+                                <span class="text-error font-medium">Closed</span>
+                            </div>
+                            <div class="border-t border-border-light pt-2 mt-4">
+                                <div class="flex justify-between">
+                                    <span class="text-text-secondary">Customer Support</span>
+                                    <span class="text-success font-medium">7:00 AM - 8:00 PM Daily</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Emergency Support -->
+    <section class="py-16 bg-error-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="bg-white rounded-xl p-8 shadow-sm">
+                <div class="bg-error-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg class="h-8 w-8 text-error" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z"/>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-poppins font-bold text-primary mb-4">Emergency Support</h3>
+                <p class="text-text-secondary mb-6">
+                    For urgent delivery issues, garden emergencies, or critical support needs outside business hours
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="tel:+254700123456" class="btn-primary">
+                        📞 Emergency Hotline: +254 700 123 456
+                    </a>
+                    <a href="https://wa.me/254700123456" class="btn-secondary">
+                        💬 WhatsApp Emergency
+                    </a>
+                </div>
+                <p class="text-sm text-text-secondary mt-4">
+                    Available 24/7 for genuine emergencies only
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Media & Community -->
+    <section class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-poppins font-bold text-primary mb-4">Connect With Us</h2>
+            <p class="text-lg text-text-secondary mb-8">
+                Follow us for daily updates, gardening tips, and community stories
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-6 mb-8">
+                <!-- Facebook -->
+                <a href="https://facebook.com/greengrovemarket" class="card p-6 hover:shadow-lg transition-all duration-300 group">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-200 transition-colors">
+                        <svg class="h-8 w-8 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-poppins font-semibold text-primary mb-2">Facebook</h3>
+                    <p class="text-text-secondary text-sm">Daily updates & community</p>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://instagram.com/greengrovemarket" class="card p-6 hover:shadow-lg transition-all duration-300 group">
+                    <div class="bg-pink-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-pink-200 transition-colors">
+                        <svg class="h-8 w-8 text-pink-600" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987 6.62 0 11.987-5.367 11.987-11.987C24.014 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.49-3.323-1.297C4.198 14.895 3.708 13.744 3.708 12.447s.49-2.448 1.418-3.323c.928-.875 2.026-1.297 3.323-1.297s2.448.422 3.323 1.297c.875.875 1.297 2.026 1.297 3.323s-.422 2.448-1.297 3.323c-.875.875-2.026 1.297-3.323 1.297zm7.83-9.404c-.49 0-.875-.385-.875-.875s.385-.875.875-.875.875.385.875.875-.385.875-.875.875zm-4.262 9.404c-2.079 0-3.771-1.692-3.771-3.771s1.692-3.771 3.771-3.771 3.771 1.692 3.771 3.771-1.692 3.771-3.771 3.771z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-poppins font-semibold text-primary mb-2">Instagram</h3>
+                    <p class="text-text-secondary text-sm">Garden transformations</p>
+                </a>
+
+                <!-- Twitter -->
+                <a href="https://twitter.com/greengrovemarket" class="card p-6 hover:shadow-lg transition-all duration-300 group">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-blue-200 transition-colors">
+                        <svg class="h-8 w-8 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-poppins font-semibold text-primary mb-2">Twitter</h3>
+                    <p class="text-text-secondary text-sm">Quick updates & tips</p>
+                </a>
+            </div>
+
+            <!-- Newsletter Signup -->
+            <div class="card p-8">
+                <h3 class="text-2xl font-poppins font-semibold text-primary mb-4">Stay Updated</h3>
+                <p class="text-text-secondary mb-6">
+                    Get weekly gardening tips, seasonal produce updates, and exclusive offers
+                </p>
+                <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+                    <input type="email" placeholder="Enter your email" class="input-field flex-1" required />
+                    <button type="submit" class="btn-primary whitespace-nowrap">
+                        Subscribe
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary-800 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center mb-4">
+                        <svg class="h-8 w-8 text-accent" viewBox="0 0 40 40" fill="currentColor">
+                            <path d="M20 2C15.5 2 12 5.5 12 10c0 2.5 1 4.8 2.6 6.5L20 22l5.4-5.5C27 14.8 28 12.5 28 10c0-4.5-3.5-8-8-8zm0 11c-1.7 0-3-1.3-3-3s1.3-3 3-3 3 1.3 3 3-1.3 3-3 3z"/>
+                            <path d="M8 25c0-2 1.5-3.5 3.5-3.5h17c2 0 3.5 1.5 3.5 3.5v10c0 2-1.5 3.5-3.5 3.5h-17C9.5 38.5 8 37 8 35V25z"/>
+                            <circle cx="15" cy="30" r="2" fill="white"/>
+                            <circle cx="25" cy="30" r="2" fill="white"/>
+                        </svg>
+                        <span class="ml-2 text-xl font-poppins font-bold">GreenGrove Market</span>
+                    </div>
+                    <p class="text-primary-200 mb-4">Living Fresh, Growing Forward</p>
+                    <p class="text-primary-300 text-sm">Kenya's premier seed-to-table ecosystem, connecting you with fresh groceries and expert garden services.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="font-poppins font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="product_marketplace.html" class="text-primary-200 hover:text-white transition-colors">Shop Groceries</a></li>
+                        <li><a href="garden_services_hub.html" class="text-primary-200 hover:text-white transition-colors">Garden Services</a></li>
+                        <li><a href="knowledge_center.html" class="text-primary-200 hover:text-white transition-colors">Knowledge Center</a></li>
+                        <li><a href="customer_dashboard.html" class="text-primary-200 hover:text-white transition-colors">My Account</a></li>
+                    </ul>
+                </div>
+
+                <!-- Support -->
+                <div>
+                    <h3 class="font-poppins font-semibold mb-4">Support</h3>
+                    <ul class="space-y-2">
+                        <li><a href="contact_support.html" class="text-primary-200 hover:text-white transition-colors">Contact Us</a></li>
+                        <li><a href="javascript:void(0)" class="text-primary-200 hover:text-white transition-colors">FAQ</a></li>
+                        <li><a href="javascript:void(0)" class="text-primary-200 hover:text-white transition-colors">Delivery Info</a></li>
+                        <li><a href="javascript:void(0)" class="text-primary-200 hover:text-white transition-colors">Returns</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h3 class="font-poppins font-semibold mb-4">Contact</h3>
+                    <div class="space-y-2 text-primary-200">
+                        <p class="flex items-center">
+                            <svg class="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                            </svg>
+                            +254 700 123 456
+                        </p>
+                        <p class="flex items-center">
+                            <svg class="h-4 w-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                            hello@greengrove.co.ke
+                        </p>
+                        <p class="flex items-start">
+                            <svg class="h-4 w-4 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                            Westlands, Nairobi, Kenya
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-primary-700 mt-8 pt-8 text-center">
+                <p class="text-primary-300">© 2025 GreenGrove Market. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile Bottom Navigation -->
+    <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-border-light md:hidden z-40">
+        <div class="grid grid-cols-4 gap-1">
+            <a href="homepage.html" class="flex flex-col items-center py-2 px-1 text-text-secondary">
+                <svg class="h-6 w-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+                </svg>
+                <span class="text-xs font-medium">Home</span>
+            </a>
+            <a href="product_marketplace.html" class="flex flex-col items-center py-2 px-1 text-text-secondary">
+                <svg class="h-6 w-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4m0 0L7 13m0 0l-2.5 2.5M7 13l2.5 2.5m6 0L19 18H7"/>
+                </svg>
+                <span class="text-xs font-medium">Shop</span>
+            </a>
+            <a href="garden_services_hub.html" class="flex flex-col items-center py-2 px-1 text-text-secondary">
+                <svg class="h-6 w-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707"/>
+                </svg>
+                <span class="text-xs font-medium">Garden</span>
+            </a>
+            <a href="contact_support.html" class="flex flex-col items-center py-2 px-1 text-primary">
+                <svg class="h-6 w-6 mb-1" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-2 0c0 .993-.241 1.929-.668 2.754l-1.524-1.525a3.997 3.997 0 00.078-2.183l1.562-1.562C17.756 8.249 18 9.1 18 10zm-5.165 3.913l1.58 1.58A5.98 5.98 0 0110 16a5.98 5.98 0 01-4.415-1.507l1.58-1.58A3.996 3.996 0 0010 14c.666 0 1.298-.162 1.835-.087zM4 10a8 8 0 018-8V0a10 10 0 00-10 10h2zm5.354-7.354A9.966 9.966 0 0110 2c-.656 0-1.298.08-1.915.236L7.05 1.2A9.954 9.954 0 0110 1c1.035 0 2.036.157 2.975.457l-.621 1.036C11.69 2.18 10.86 2 10 2c-.86 0-1.69.18-2.354.646z" clip-rule="evenodd"/>
+                </svg>
+                <span class="text-xs font-medium">Support</span>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // FAQ toggle functionality
+        function toggleFAQ(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('svg');
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                content.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // Contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Show success message
+            alert('Thank you for your message! We will get back to you within 24-48 hours.');
+            
+            // Reset form
+            this.reset();
+        });
+
+        // File upload handling
+        document.getElementById('attachment').addEventListener('change', function(e) {
+            const files = e.target.files;
+            const label = e.target.nextElementSibling;
+            
+            if (files.length > 0) {
+                const fileNames = Array.from(files).map(file => file.name).join(', ');
+                label.innerHTML = `
+                    <svg class="h-12 w-12 text-success mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <p class="text-success font-medium">${files.length} file(s) selected</p>
+                    <p class="text-sm text-text-secondary mt-2">${fileNames}</p>
+                `;
+            }
+        });
+
+        // Add smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>
